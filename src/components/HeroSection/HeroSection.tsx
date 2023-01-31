@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section>
       <div className="container">
-        <h1>Buy and Sell NFTs on Layer 2 Blockchain Solutions</h1>
+        <h1>Discover</h1>
       </div>
     </section>
   );

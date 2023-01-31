@@ -1,14 +1,15 @@
 import AppLayoutContainer from "../components/AppLayoutContainer";
+import CollectionsCarousel from "../components/CollectionsCarousel";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
-import TopCollections from "../components/TopCollections";
 
 const Home = () => {
   return (
     <AppLayoutContainer>
       <Navbar />
       <HeroSection />
-      <TopCollections />
+      <CollectionsCarousel />
+      {/* <TopCollections /> */}
     </AppLayoutContainer>
   );
 };

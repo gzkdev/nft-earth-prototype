@@ -16,18 +16,13 @@
 }
 
 .header a {
-  /*background-color: #213547;
-  color: #fff;
-  */
-  color: #213547;
-  font-weight: 600;
-  padding: 12px 24px;
+  padding: 8px 24px;
   border: 1px solid currentColor;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
   transition: 200ms;
   -webkit-transition: 200ms;
   -moz-transition: 200ms;
