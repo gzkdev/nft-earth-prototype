@@ -1,0 +1,37 @@
+.header {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > div:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header a {
+  /*background-color: #213547;
+  color: #fff;
+  */
+  color: #213547;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: 200ms;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+}
+
+.header a:hover {
+  opacity: 0.8;
+}
