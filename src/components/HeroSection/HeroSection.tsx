@@ -1,9 +1,9 @@
-import "./HeroSection.css";
+import styles from "./HeroSection.module.css";
 
 const HeroSection = () => {
   return (
     <section>
-      <div className="container">
+      <div className={styles.container}>
         <h1>Discover</h1>
       </div>
     </section>
