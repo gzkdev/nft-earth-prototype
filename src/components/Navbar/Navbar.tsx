@@ -12,6 +12,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-container">
         <Link to="/" className="logo">
+          <div className="img-box"></div>
           NFTEarth
         </Link>
         <div className="input-box">
@@ -33,17 +34,17 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink to="/">
-                <FaRegUserCircle size={20} />
+                <FaRegUserCircle size={24} />
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/">
-                <FaShoppingCart size={20} />
+                <FaShoppingCart size={24} />
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/">
-                <FaWallet size={20} />
+                <FaWallet size={24} />
               </NavLink>
             </li>
           </ul>
