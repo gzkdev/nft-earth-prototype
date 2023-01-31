@@ -3,8 +3,7 @@
   align-items: center;
   gap: 24px;
   overflow: auto;
-  padding-inline: 20px;
-  max-width: 1400px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -15,7 +14,7 @@
 .card {
   position: relative;
   height: 360px;
-  min-width: min(320px, 85vw);
+  min-width: 320px;
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
@@ -35,13 +34,16 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 12px 16px;
+  padding: 24px 20px;
+}
+
+.details .name {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
   .grid {
-    width: 90%;
-    max-width: 1400px;
-    /* padding-left: 60px; */
+    padding-left: 64px;
   }
 }

@@ -48,8 +48,8 @@ const CollectionsCarousel = () => {
           <div className="card">
             <div className="thumbnail"></div>
             <div className="details">
-              <div>{d.name}</div>
-              <div>Floor: {d.price} ETH</div>
+              <div className="name">{d.name}</div>
+              <div className="price">Floor: {d.price} ETH</div>
             </div>
           </div>
         </Link>
