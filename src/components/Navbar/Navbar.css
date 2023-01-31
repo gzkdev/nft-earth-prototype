@@ -137,6 +137,104 @@
   font-weight: 600;
 }
 
+.mobile-menu {
+  position: absolute;
+  width: 90%;
+  top: 0;
+  left: 50%;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translate(-50%, 5%);
+  -webkit-transform: translate(-50%, 20%);
+  -moz-transform: translate(-50%, 5%);
+  -ms-transform: translate(-50%, 5%);
+  -o-transform: translate(-50%, 5%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 200ms;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+}
+
+.mobile-menu[data-active="true"] {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, 5%);
+  -webkit-transform: translate(-50%, 5%);
+  -moz-transform: translate(-50%, 5%);
+  -ms-transform: translate(-50%, 5%);
+  -o-transform: translate(-50%, 5%);
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.close-menu-btn:hover {
+  background-color: #ebebeb;
+}
+
+.mb-menu-title {
+  font-size: 12px;
+  opacity: 0.6;
+  position: relative;
+  top: 20px;
+  left: 16px;
+}
+
+.mb-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 24px;
+}
+
+.mb-nav a {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  padding: 16px 16px;
+}
+
+.mb-nav a {
+  border-top: 1px solid #ebebeb;
+}
+
+.mb-nav button {
+  padding: 12px 12px;
+  font-weight: 600;
+  background-color: #111a24;
+  color: #fff;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  width: 90%;
+  margin: 8px auto;
+}
+
 @media (min-width: 768px) {
   .input-box {
     position: relative;
@@ -162,6 +260,10 @@
 
   .menu-box,
   .close-btn {
+    display: none;
+  }
+
+  .mobile-menu {
     display: none;
   }
 }

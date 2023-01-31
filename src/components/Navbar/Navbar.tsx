@@ -5,7 +5,6 @@ import {
   FaRegUserCircle,
   FaShoppingCart,
   FaTimes,
-  FaEllipsisH,
   FaBars,
 } from "react-icons/fa";
 import "./Navbar.css";
@@ -13,6 +12,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [showSearchBar, setShowSearchBar] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
     <div className="navbar">
@@ -64,8 +64,23 @@ const Navbar = () => {
             <FaSearch size={18} />
           </button>
           <button className="menu-btn">
-            <FaBars size={18} />
+            <FaBars size={18} onClick={() => setShowMobileMenu(true)} />
           </button>
+        </div>
+        <div className="mobile-menu" data-active={showMobileMenu}>
+          <div className="mb-menu-title">Menu</div>
+          <button
+            className="close-menu-btn"
+            onClick={() => setShowMobileMenu(false)}
+          >
+            <FaTimes />
+          </button>
+          <div className="mb-nav">
+            <Link to="/">Home</Link>
+            <Link to="/">Sell</Link>
+            <Link to="/">Stats</Link>
+            <button>Connect Wallet</button>
+          </div>
         </div>
       </div>
     </div>
