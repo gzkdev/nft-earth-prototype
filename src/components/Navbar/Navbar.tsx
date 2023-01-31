@@ -4,10 +4,16 @@ import {
   FaWallet,
   FaRegUserCircle,
   FaShoppingCart,
+  FaTimes,
+  FaEllipsisH,
+  FaBars,
 } from "react-icons/fa";
 import "./Navbar.css";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [showSearchBar, setShowSearchBar] = useState(false);
+
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -15,9 +21,13 @@ const Navbar = () => {
           <div className="img-box"></div>
           NFTEarth
         </Link>
-        <div className="input-box">
+        <div className="input-box" data-visible={showSearchBar}>
           <FaSearch className="search-icon" />
+          <button className="close-btn" onClick={() => setShowSearchBar(false)}>
+            <FaTimes />
+          </button>
           <input
+            autoComplete="off"
             type="search"
             name="s"
             id="s"
@@ -49,6 +59,14 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+        <div className="menu-box">
+          <button className="menu-btn" onClick={() => setShowSearchBar(true)}>
+            <FaSearch size={18} />
+          </button>
+          <button className="menu-btn">
+            <FaBars size={18} />
+          </button>
+        </div>
       </div>
     </div>
   );

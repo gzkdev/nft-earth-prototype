@@ -24,8 +24,8 @@
 }
 
 .img-box {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background-color: #ebebeb;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -35,27 +35,32 @@
 }
 
 .input-box {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 400px;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box[data-visible="true"] {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .input-box input {
   width: 100%;
-  height: 48px;
+  height: 100%;
   font-family: inherit;
   padding: 0 24px 0 40px;
   border: none;
   outline: none;
   background-color: #ebebeb;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
 }
 
-.input-box .search-icon {
+.search-icon,
+.close-btn {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -66,8 +71,55 @@
   -o-transform: translate(0, -52%);
 }
 
+.close-btn {
+  left: unset;
+  right: 16px;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.input-box .close-btn:hover {
+  background-color: #fff;
+}
+
 .nav {
   margin-left: auto;
+  display: none;
+}
+
+.menu-box {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.menu-btn:hover {
+  background-color: #ebebeb;
 }
 
 .nav-list {
@@ -81,4 +133,32 @@
   text-decoration: none;
   color: initial;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .input-box {
+    position: relative;
+    height: 48px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+
+  .input-box[data-visible="false"] {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .menu-box,
+  .close-btn {
+    display: none;
+  }
 }
