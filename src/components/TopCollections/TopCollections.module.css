@@ -62,12 +62,17 @@
   font-weight: 600;
 }
 
+.name {
+  word-break: break-all;
+}
+
 .index {
   opacity: 0.6;
   font-size: 18px;
 }
 
-.price {
+.price,
+.supply {
   display: none;
 }
 
@@ -81,7 +86,8 @@
     grid-template-columns: 1fr repeat(3, 100px);
   }
 
-  .price {
+  .price,
+  .supply {
     display: block;
   }
 
